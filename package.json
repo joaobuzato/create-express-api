@@ -1,0 +1,26 @@
+{
+  "name": "create-express-api",
+  "version": "0.0.1",
+  "description": "This project is a boilerplate to build an api with express JS, including the connection to mysql, tests, and other things.",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "pub": "npm patch --force && npm publish"
+  },
+  "bin": {
+    "create-express-api": "bin/install.mjs"
+  },
+  "keywords": [],
+  "author": "João Pedro Buzato",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "ora": "^8.0.1"
+  }
+}
