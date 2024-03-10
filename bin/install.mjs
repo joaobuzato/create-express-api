@@ -12,7 +12,7 @@ const rm = promisify(fs.rm);
 if (process.argv.length < 3) {
   console.log("You have to provide a name to your app.");
   console.log("For example :");
-  console.log("    npx simple-ts-app my-app");
+  console.log("    npx create-express-api my-app");
   process.exit(1);
 }
 
@@ -20,7 +20,7 @@ const projectName = process.argv[2];
 const currentPath = process.cwd();
 const projectPath = path.join(currentPath, projectName);
 
-const git_repo = "https://github.com/joaobuzato/reader-dungeon-api.git";
+const git_repo = "https://github.com/joaobuzato/express-api-boilerplate.git";
 
 if (fs.existsSync(projectPath)) {
   console.log(
