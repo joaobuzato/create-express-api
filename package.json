@@ -1,6 +1,6 @@
 {
   "name": "@joaobuzato/create-express-api",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "This project is a boilerplate to build an api with express JS, including the connection to mysql, tests, and other things.",
   "main": "src/index.ts",
   "scripts": {
@@ -20,8 +20,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/joaobuzato/create-express-api.git"
-  },
-  "dependencies": {
-    "cli-spinners": "^3.1.0"
   }
 }
