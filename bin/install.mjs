@@ -3,7 +3,6 @@ import { promisify } from "util";
 import cp from "child_process";
 import path from "path";
 import fs from "fs";
-import ora from "ora";
 
 // convert libs to promises
 const exec = promisify(cp.exec);
@@ -32,12 +31,8 @@ if (fs.existsSync(projectPath)) {
 }
 
 try {
-  const gitSpinner = ora("Downloading files...").start();
-  // clone the repo into the project folder -> creates the new boilerplate
   await exec(`git clone --depth 1 ${git_repo} ${projectPath} --quiet`);
-  gitSpinner.succeed();
 
-  const cleanSpinner = ora("Removing useless files").start();
   const rmGit = rm(path.join(projectPath, ".git"), {
     recursive: true,
     force: true,
@@ -50,12 +45,8 @@ try {
   await Promise.all([rmGit, rmBin]);
 
   process.chdir(projectPath);
-  await exec("npm uninstall ora cli-spinners");
-  cleanSpinner.succeed();
 
-  const npmSpinner = ora("Installing dependencies...").start();
   await exec("npm install");
-  npmSpinner.succeed();
 
   console.log("The installation is done!");
   console.log("You can now run your app with:");
