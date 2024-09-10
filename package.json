@@ -1,6 +1,6 @@
 {
   "name": "@joaobuzato/create-express-api",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "This project is a boilerplate to build an api with express JS, including the connection to mysql, tests, and other things.",
   "main": "src/index.ts",
   "scripts": {
