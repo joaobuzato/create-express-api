@@ -1,6 +1,15 @@
 # create-express-api
 
-This project is a boilerplate to build an api with express JS, including the connection to mysql, tests, and other things.
+Do you know how easy it is to create a new react app with the create-react-app command? 
+
+Now you can create an easy API with express, layers, mysql connection and some tests. All you have to do is 
+
+`npm i --global @joaobuzato/create-express-api`
+
+And inside a root folder you run 
+`npx run create-react-app myProjectName`
+
+It's done! 
 
 To make the project run, you only need to create and .env file on the root of the project, with the database credentials.
 
